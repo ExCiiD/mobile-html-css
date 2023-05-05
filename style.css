@@ -7,3 +7,51 @@
 body {
     background-color: #f0edeb;
 }
+
+header{
+    background-color: white;
+    height: 100px;
+}
+/*-------------navbar---------------*/
+
+nav{
+    display: flex;
+    justify-content:space-around ;
+    height: 30%;
+    padding: 60px 0;
+
+}
+
+form{
+    display: flex;
+    padding: 1px;
+    border: 1px solid #000;
+    border-radius:15px
+}
+
+/*----search bar----*/
+input[type="search"]{
+    border: none;
+    background: transparent;
+    margin: 0;
+    border: 1px solid transparent; 
+    border-radius: inherit ;
+}
+
+input[type="search"]::placeholder {
+  color: #bbb;
+}
+
+button[type="submit"] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent url("img/search-line.svg") no-repeat center;
+
+}
+
+  /*----search bar----*/
