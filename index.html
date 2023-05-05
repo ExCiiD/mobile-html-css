@@ -10,12 +10,12 @@
 <body>
     <header>
         <nav class="navbar">
-            <img src="img/back icon.svg" alt="back icon">
+            <img class="nav-icon" src="img/back icon.svg" alt="back icon">
             <form>
                 <input type="search" placeholder="Search..">
                 <button type="submit">search</button>
             </form>
-            <img src="img/menu.svg" alt="menu icon">
+            <img class="nav-icon" src="img/menu.svg" alt="menu icon">
         </nav>
     </header>
     <hero>
@@ -25,7 +25,72 @@
         </p>
     </hero>
     <main>
+        <div class="container">
+            <input type="radio" name="slider" id="item-1" >
+            <input type="radio" name="slider" id="item-2"checked>
+            <input type="radio" name="slider" id="item-3">
+            <div class="cards">
+                <label class="img-card" for="item-1" id="pizza-1">
+                <img class="img-pizza" src="img/pizza.png" alt="pizza">
+                </label>
+                <label class="card" for="item-2" id="pizza-2">
+                <img class="img-pizza" src="img/pizza.png" alt="pizza">
+                </label>
+                <label class="card" for="item-3" id="pizza-3">
+                <img class="img-pizza" src="img/pizza.png" alt="pizza">
+                </label>
+            </div>
+        <div class="infos">
+            <div class="infos">
+                <label class="info-card" for="item-1" id="info-pizza-1">
+                    <h1>Hawaïenne</h1>
+                    <hr>
+                    <p>sauce tomate,jambon,fromage,ananas</p>
+                    <hr>
+                    <div id="taille-slider">
+                        <input type="radio" name="taille-slider" id="taille1">
+                        <input type="radio" name="taille-slider" id="taille2" checked>
+                        <input type="radio" name="taille-slider" id="taille3">
+                        <div id="tailles">
+                            <div id="overflow">
+                                <div class="inner">
+                                    <div class="slide taille_1">
+                                        <div class="slide-content">
+                                            <h1>22cm</h1>
+                                            <p>8€</p>
+                                        </div>
+                                    </div>
+                                    <div class="slide taille_2">
+                                        <div class="slide-content">
+                                            <h1>30cm</h1>
+                                            <p>12€</p>
+                                        </div>
+                                    </div>
+                                    <div class="slide taille_3">
+                                        <div class="slide-content">
+                                            <h1>40cm</h1>
+                                            <p>16€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controls">
+                            <label for="taille1"></label>
+                            <label for="taille2"></label>
+                            <label for="taille3"></label>
+                        </div>
+                        <div id="bullets">
+                            <label for="taille1"></label>
+                            <label for="taille2"></label>
+                            <label for="taille3"></label>
+                        </div>
+                    </div>
 
+                </label>
+            </div>
+        </div>
+        </div>
     </main>
     <footer>
 
