@@ -5,14 +5,14 @@
 }
 
 body {
-    background-color: #f0edeb;
+    background-color: #e6e6e8;
 }
 
 header{
     background-color: white;
     height: 100px;
 }
-/*-------------navbar---------------*/
+            /*---------------------navbar-------------------------*/
 
 nav{
     display: flex;
@@ -55,3 +55,25 @@ button[type="submit"] {
 }
 
   /*----search bar----*/
+
+            /*---------------------navbar-------------------------*/
+
+            /*---------------------hero---------------------------*/
+
+hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+hero > img {
+    width: 300px;
+    padding: 20px 0 40px;}
+
+hero > p {
+    padding: 0 25px;
+    text-align: center;
+}
+            /*---------------------hero---------------------------*/
+
+  
