@@ -8,7 +8,7 @@ const text2_options = [
   "sauce tomate,pepperoni,fromage",
   "sauce tomate,jambon,fromage,champignons"
 ];
-const color_options = ["#EBB9D2", "#FE9968", "#7FE0EB", "#6CE5B1"];
+const color_options = ["#1e1e1e", "#1e1e1e", "#1e1e1e", "#1e1e1e"];
 const image_options = [
   "img/pizza.png",
   "img/pizza.png",
