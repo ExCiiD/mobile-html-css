@@ -71,3 +71,13 @@ optionPrevious.onclick = function () {
     carousel.classList.remove("anim-previous");
   }, 650);
 };
+
+
+/*------------------overlay menu--------------------*/
+
+const showmenu = document.getElementById('show-menu');
+const hidemenu = document.getElementById('hide-menu');
+const menuoverlay = document.querySelector('.menu-overlay');
+
+showmenu.addEventListener('click', () => menuoverlay.classList.add('show-overlay'));
+hidemenu.addEventListener('click', () => menuoverlay.classList.remove('show-overlay'));

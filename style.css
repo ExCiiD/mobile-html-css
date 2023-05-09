@@ -23,7 +23,42 @@ header{
     background-color: white;
     height: 80px;
 }
-            /*---------------------navbar-------------------------*/
+            /*---------------------menu-------------------------*/
+.show-overlay {
+  opacity: 0.9;
+  z-index: 200;
+}
+.menu-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:white;
+  z-index: 100;
+  opacity: 0; 
+  transition: all 300ms ease-in-out;
+}
+.menu-navigation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2.2em;
+}
+
+.hide-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+            /*---------------------menu-------------------------*/
+
+
+
+            /*---------------------nav-------------------------*/
+
+.navigation{
+  display: none;
+}
 
 .logosite{
   width:40px;
@@ -76,7 +111,7 @@ button[type="submit"] {
 
   /*----search bar----*/
 
-            /*---------------------navbar-------------------------*/
+            /*---------------------nav-------------------------*/
 
 
 
@@ -245,7 +280,7 @@ main {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      z-index: 101;
+      z-index: 50;
       position: absolute;
       transform: translate(0px, 15px);
     }
@@ -379,7 +414,7 @@ main {
 
                 /*--------------------section-------------------------*/
 
-section {
+.map {
   height: 400px;
 }
 iframe {
