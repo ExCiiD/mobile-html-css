@@ -4,7 +4,7 @@ const text1_options = [
   "reine"
 ];
 const text2_options = [
-  "sauce tomate,jambon,fromage;ananas",
+  "sauce tomate,jambon,fromage,ananas",
   "sauce tomate,pepperoni,fromage",
   "sauce tomate,jambon,fromage,champignons"
 ];
