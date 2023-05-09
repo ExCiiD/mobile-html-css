@@ -10,12 +10,12 @@
 <body>
     <header>
         <nav class="navbar">
-            <img class="nav-icon" src="img/back icon.svg" alt="back icon">
+            <a  href="#"><img class="nav-icon hovergrow" src="img/back icon.svg" alt="back icon"></a>
             <form>
                 <input type="search" placeholder="Search..">
-                <button type="submit">search</button>
+                <a href="#"><button type="submit">search</button></a>
             </form>
-            <img class="nav-icon" src="img/menu.svg" alt="menu icon">
+            <a  href="#"><img class="nav-icon hovergrow" src="img/menu.svg" alt="menu icon"></a>
         </nav>
     </header>
     <hero>
@@ -28,18 +28,33 @@
         <div id="carousel-wrapper">
             <div id="menu">
                 <div id="current-option">
-                    <span id="current-option-text1" data-previous-text="" data-next-text=""></span>
-                    <span id="current-option-text2" data-previous-text="" data-next-text=""></span>
+                    <div id="current-option-text1" data-previous-text="" data-next-text=""></div>
+                    <div id="image"></div>
+                    <div id="current-option-text2" data-previous-text="" data-next-text=""></div>
                 </div>
                 <button id="previous-option"></button>
                 <button id="next-option"></button>
             </div>
-            <div id="image"></div>
+            
         </div>
 <script src="slider.js"></script>
     </main>
     <footer>
-
+        <div class="bloc-nav-footer">
+            <ul class="nav-footer">
+                <li class="hovergrow"><a href="#">Contact</a></li>
+                <li class="hovergrow"><a href="#">Menu</a></li>
+                <li class="hovergrow"><a href="#">Map</a></li>
+            </ul>
+        </div>
+        <div class="reseaux">
+            <ul class="bloc-reseaux">
+                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282541_fb_social media_facebook_facebook logo_social network_icon.svg"></a></li>
+                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282544_camera_instagram_social media_social network_instagram logo_icon.svg"></a></li>
+                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282551_tweet_twitter_twitter logo_icon.svg"></a></li>
+            </ul>
+        </div>
+        <p class="copyright">ARISON NIRINA Steaven © 2023</p>
     </footer>
 </body>
 </html>

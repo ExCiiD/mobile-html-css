@@ -11,10 +11,13 @@ body {
 ul li {
     list-style: none;
     color: white;
+    transition: all .2s ease-in-out; 
 }
 
 a {
     text-decoration: none;
+    color: #000;
+    transition: all .2s ease-in-out; 
 }
 header{
     background-color: white;
@@ -70,6 +73,9 @@ button[type="submit"] {
 
             /*---------------------navbar-------------------------*/
 
+
+
+
             /*---------------------hero---------------------------*/
 
 hero{
@@ -83,278 +89,319 @@ hero > img {
     padding: 20px 0 40px;}
 
 hero > p {
-    padding: 0 25px;
+    padding: 0 25px 30px;
     text-align: center;
 }
             /*---------------------hero---------------------------*/
+
+
+
 
             /*---------------------main---------------------------*/
 
 main {
     background-color:#1e1e1e ;
     color: white;
+    height: 390px;
 }
 
-.img-pizza {
-    width: 100px;
-}
-#carousel-wrapper {
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-
-  #menu {
-    height: 380px;
-    width: 720px;
-    overflow: hidden;
-    font-weight: 700;
-    line-height: 1;
+  #carousel-wrapper {
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    vertical-align: middle;
-    transition: all 0.6s ease-in-out;
+    overflow: hidden;
 
-    #current-option {
-      position: relative;
-      height: 100%;
-      transform: translate(-25%, 0%);
+    #menu {
+      height: 380px;
+      width: 720px;
+      overflow: hidden;
+      font-weight: 700;
+      line-height: 1;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      vertical-align: middle;
+      transition: all 0.6s ease-in-out;
 
-      #current-option-text1 {
-        font-size: 1.6rem;
-        line-height: 3rem;
-        width: 220px;
-        height: 200px;
+      #current-option {
+        position: relative;
+        height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-around;
+        overflow: hidden;
 
-        &::before {
-          content: attr(data-next-text);
-          position: absolute;
-          transform: translate(0%, 380px);
-          width: 100%;
+        #current-option-text1 {
+          font-size: 1.6rem;
+          line-height: 3rem;
+          width: 220px;
           height: 200px;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
+
+          &::before {
+            content: attr(data-next-text);
+            position: absolute;
+            transform: translate(0%, 380px);
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+          }
+
+          &::after {
+            content: attr(data-previous-text);
+            position: absolute;
+            transform: translate(0%, -380px);
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+          }
         }
 
-        &::after {
-          content: attr(data-previous-text);
-          position: absolute;
-          transform: translate(0%, -380px);
-          width: 100%;
-          height: 200px;
+        #current-option-text2 {
+          font-size: 0.9rem;
+          height: 40px;
           display: flex;
           flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
+          align-items: flex-start;
+          justify-content: flex-end;
+
+          &::before {
+            content: attr(data-next-text);
+            position: absolute;
+            transform: translate(0%, 380px);
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+          }
+
+          &::after {
+            content: attr(data-previous-text);
+            position: absolute;
+            transform: translate(0%, -380px);
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+          }
         }
+      }
+
+      #previous-option {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: none;
+        display: block;
+        cursor: pointer;
+        background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 256 256'%3E%3Cpolygon points='225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093' fill='%23333'%3E%3C/polygon%3E%3C/svg%3E");
+        background-size: cover;
+        position: absolute;
+        transform: translate(0px, 180px);
+      }
+
+      #next-option {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: none;
+        display: block;
+        cursor: pointer;
+        background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 256 256'%3E%3Cpolygon points='225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093' fill='%23333'%3E%3C/polygon%3E%3C/svg%3E");
+        background-size: cover;
+        position: absolute;
+        transform: translate(0px, -165px) rotate(180deg);
+      }
+    }
+
+    #image {
+      height: 240px;
+      width: 240px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 101;
+      position: absolute;
+      transform: translate(0px, 15px);
+    }
+
+    &.anim-next {
+      pointer-events: none;
+
+      #current-option-text1 {
+        animation: next-text 0.65s 0.085s;
       }
 
       #current-option-text2 {
-        font-size: 0.8rem;
-        width: 220px;
-        height: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
+        animation: next-text 0.65s 0.085s;
+      }
 
-        &::before {
-          content: attr(data-next-text);
-          position: absolute;
-          transform: translate(0%, 380px);
-          width: 100%;
-          height: 40px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-end;
-        }
+      #previous-option {
+        animation: next-top-arrow 0.65s 0.085s;
+      }
 
-        &::after {
-          content: attr(data-previous-text);
-          position: absolute;
-          transform: translate(0%, -380px);
-          width: 100%;
-          height: 40px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-end;
-        }
+      #next-option {
+        animation: next-bottom-arrow 0.65s 0.085s;
+      }
+      
+      #image {
+        animation: next-image 0.65s 0.085s;
       }
     }
 
-    #previous-option {
-      width: 1.5rem;
-      height: 1.5rem;
-      border: none;
-      display: block;
-      cursor: pointer;
-      background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 256 256'%3E%3Cpolygon points='225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093' fill='%23333'%3E%3C/polygon%3E%3C/svg%3E");
-      background-size: cover;
-      position: absolute;
-      transform: translate(140px, 150px);
-    }
+    &.anim-previous {
+      pointer-events: none;
 
-    #next-option {
-      width: 1.5rem;
-      height: 1.5rem;
-      border: none;
-      display: block;
-      cursor: pointer;
-      background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 256 256'%3E%3Cpolygon points='225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093' fill='%23333'%3E%3C/polygon%3E%3C/svg%3E");
-      background-size: cover;
-      position: absolute;
-      transform: translate(140px, -150px) rotate(180deg);
-    }
-  }
+      #current-option-text1 {
+        animation: previous-text 0.65s 0.085s;
+      }
 
-  #image {
-    height: 240px;
-    width: 240px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 101;
-    position: absolute;
-    transform: translate(140px, 0);
-  }
+      #current-option-text2 {
+        animation: previous-text 0.65s 0.085s;
+      }
 
-  &.anim-next {
-    pointer-events: none;
+      #previous-option {
+        animation: previous-top-arrow 0.65s 0.085s;
+      }
 
-    #current-option-text1 {
-      animation: next-text 0.65s 0.085s;
-    }
-
-    #current-option-text2 {
-      animation: next-text 0.65s 0.085s;
-    }
-
-    #previous-option {
-      animation: next-top-arrow 0.65s 0.085s;
-    }
-
-    #next-option {
-      animation: next-bottom-arrow 0.65s 0.085s;
-    }
-    
-    #image {
-      animation: next-image 0.65s 0.085s;
+      #next-option {
+        animation: previous-bottom-arrow 0.65s 0.085s;
+      }
+      
+      #image {
+        animation: previous-image 0.65s 0.085s;
+      }
     }
   }
 
-  &.anim-previous {
-    pointer-events: none;
-
-    #current-option-text1 {
-      animation: previous-text 0.65s 0.085s;
+  @keyframes previous-text {
+    50%,
+    55% {
+      transform: translate(0%, 390px);
     }
-
-    #current-option-text2 {
-      animation: previous-text 0.65s 0.085s;
-    }
-
-    #previous-option {
-      animation: previous-top-arrow 0.65s 0.085s;
-    }
-
-    #next-option {
-      animation: previous-bottom-arrow 0.65s 0.085s;
-    }
-    
-    #image {
-      animation: previous-image 0.65s 0.085s;
+    to {
+      transform: translate(0%, 380px);
     }
   }
+
+  @keyframes previous-top-arrow {
+    50% {
+      transform: translate(310px, 53px);
+    }
+  }
+
+  @keyframes previous-bottom-arrow {
+    50% {
+      transform: translate(310px, -47px) rotate(180deg);
+    }
+  }
+
+  @keyframes previous-image {
+    0% {
+      transform:  scale(1);
+      opacity: 1;
+    }
+    70% {
+      transform:  scale(1.1);
+      opacity: 0;
+    }
+    100% {
+      transform:  scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes next-text {
+    50%,
+    55% {
+      transform: translate(0%, -390px);
+    }
+    to {
+      transform: translate(0%, -380px);
+    }
+  }
+
+  @keyframes next-top-arrow {
+    50% {
+      transform: translate(310px, 47px);
+    }
+  }
+
+  @keyframes next-bottom-arrow {
+    50% {
+      transform: translate(310px, -53px) rotate(180deg);
+    }
+  }
+
+  @keyframes next-image {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    70% {
+      transform:  scale(1.1);
+      opacity: 0;
+    }
+    100% {
+      transform:  scale(1);
+      opacity: 1;
+    }
 }
+                /*---------------------main---------------------------*/
 
-@keyframes previous-text {
-  50%,
-  55% {
-    transform: translate(0%, 390px);
-  }
-  to {
-    transform: translate(0%, 380px);
-  }
+
+
+
+                /*---------------footer-----------------*/
+
+footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+    height: 130px;
 }
-
-@keyframes previous-top-arrow {
-  50% {
-    transform: translate(310px, 53px);
-  }
+.bloc-nav-footer {
+  width: 100%;
 }
-
-@keyframes previous-bottom-arrow {
-  50% {
-    transform: translate(310px, -47px) rotate(180deg);
-  }
+.nav-footer{
+  display: flex;
+  justify-content: space-around;
 }
-
-@keyframes previous-image {
-  0% {
-    transform: translate(140px, 0) scale(1);
-    opacity: 1;
-  }
-  70% {
-    transform: translate(140px, 0) scale(1.1);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(140px, 0) scale(1);
-    opacity: 1;
-  }
+.reseaux{
+  width: 100%;
 }
-
-@keyframes next-text {
-  50%,
-  55% {
-    transform: translate(0%, -390px);
-  }
-  to {
-    transform: translate(0%, -380px);
-  }
+.bloc-reseaux{
+  display: flex;
+  justify-content: space-evenly;
 }
-
-@keyframes next-top-arrow {
-  50% {
-    transform: translate(310px, 47px);
-  }
+.logo-reseaux {
+  width:30px ;
+  height:30px ;
 }
+                /*---------------footer-----------------*/
 
-@keyframes next-bottom-arrow {
-  50% {
-    transform: translate(310px, -53px) rotate(180deg);
-  }
-}
 
-@keyframes next-image {
-  0% {
-    transform: translate(140px, 0) scale(1);
-    opacity: 1;
-  }
-  70% {
-    transform: translate(140px, 0) scale(1.1);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(140px, 0) scale(1);
-    opacity: 1;
-  }
+
+            /*----------------animations----------------*/
+.hovergrow:hover {
+  transform: scale(1.1); 
 }
