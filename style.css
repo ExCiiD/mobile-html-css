@@ -115,7 +115,7 @@ button[type="submit"] {
 
             /*---------------------hero---------------------------*/
 
-hero{
+.hero{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,11 +123,13 @@ hero{
     padding-bottom: 20px;
   }
 
-hero > img {
+.hero > img {
     width: 240px;
     padding: 20px 0 40px;}
 
-hero > p {
+.hero > h2 {
+    font-size: 1.2em; 
+    font-weight: lighter;
     padding: 0 25px 30px;
     text-align: center;
 }
@@ -410,7 +412,14 @@ main {
 
 
                 /*--------------------section-------------------------*/
-
+.map-contener {
+  display: flex;
+  flex-direction: column;
+}
+.map-contener > h2{
+  display: block;
+  align-self: center;
+}
 #map {
   height: 400px;
 }
