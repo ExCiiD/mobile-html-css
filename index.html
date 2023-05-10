@@ -8,29 +8,24 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <section class="menu-overlay">
-        <button type="button" id="hide-menu" ><img src="img/menu.svg" alt="menu icon"></button>
-        <ul class="menu-navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-        </ul>
-    </section>
+    
     <header>
-        <nav >
-            <img class="logosite" src="img/logo pizzamama.png" alt="logo site">
-            <ul class="navigation">
+        <div class="menu-overlay">
+            <a href="#" id="hide-menu" ><img src="img/menu.svg" alt="menu icon"></a>
+            <ul class="menu-navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Home</a></li>
             </ul>
+        </div>
+        <nav >
+            <img class="logosite" src="img/logo pizzamama.png" alt="logo site">
             <form>
                 <input type="search" placeholder="Search..">
                 <a href="#"><button type="submit">search</button></a>
             </form>
-            <button type="button" id="show-menu" ><img src="img/menu.svg" alt="menu icon"></button>
+            <a href="#" id="show-menu" ><img src="img/menu.svg" alt="menu icon"></a>
         </nav>
     </header>
     <hero>
@@ -38,7 +33,7 @@
         <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, soluta unde. 
         </p>
-        <a id="contact" href="tel">0692123456</a>
+        <a id="contact" href="#">0692123456</a>
     </hero>
     <main>
         <div id="carousel-wrapper">
@@ -48,8 +43,8 @@
                     <div id="image"></div>
                     <div id="current-option-text2" data-previous-text="" data-next-text=""></div>
                 </div>
-                <button id="previous-option"></button>
-                <button id="next-option"></button>
+                <button title="pizza-button" id="previous-option"></button>
+                <button title="pizza-button" id="next-option"></button>
             </div>
             
         </div>
@@ -282,9 +277,9 @@
         </div>
         <div class="reseaux">
             <ul class="bloc-reseaux">
-                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282541_fb_social media_facebook_facebook logo_social network_icon.svg"></a></li>
-                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282544_camera_instagram_social media_social network_instagram logo_icon.svg"></a></li>
-                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282551_tweet_twitter_twitter logo_icon.svg"></a></li>
+                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282541_fb_social media_facebook_facebook logo_social network_icon.svg" alt="logo facebook"></a></li>
+                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282544_camera_instagram_social media_social network_instagram logo_icon.svg" alt="logo instagram"></a></li>
+                <li class="hovergrow"><a href="#"><img class="logo-reseaux" src="img/5282551_tweet_twitter_twitter logo_icon.svg" alt="logo twitter"></a></li>
             </ul>
         </div>
         <span><a href="#">Mentions légale</a></span> <p class="copyright">ARISON NIRINA Steaven © 2023</p>

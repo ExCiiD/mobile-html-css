@@ -24,18 +24,21 @@ header{
     height: 80px;
 }
             /*---------------------menu-------------------------*/
-.show-overlay {
-  opacity: 0.9;
-  z-index: 200;
-}
+
 .menu-overlay{
   position: absolute;
+  display: none;
   width: 100%;
   height: 100%;
   background-color:white;
   z-index: 100;
   opacity: 0; 
   transition: all 300ms ease-in-out;
+}
+.show-overlay {
+  display: block;
+  opacity: 0.9;
+  z-index: 200;
 }
 .menu-navigation {
   height: 100%;
@@ -46,19 +49,16 @@ header{
   font-size: 2.2em;
 }
 
-.hide-menu {
+#hide-menu {
   display: flex;
   justify-content: flex-end;
+  padding: 25px 20px 0px;
 }
             /*---------------------menu-------------------------*/
 
 
 
             /*---------------------nav-------------------------*/
-
-.navigation{
-  display: none;
-}
 
 .logosite{
   width:40px;
