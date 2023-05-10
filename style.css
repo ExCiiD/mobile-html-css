@@ -26,7 +26,7 @@ header{
             /*---------------------menu-------------------------*/
 
 .menu-overlay{
-  position: absolute;
+  position: fixed;
   display: none;
   width: 100%;
   height: 100%;
@@ -37,7 +37,7 @@ header{
 }
 .show-overlay {
   display: block;
-  opacity: 0.9;
+  opacity: 1;
   z-index: 200;
 }
 .menu-navigation {
@@ -63,25 +63,18 @@ header{
 .logosite{
   width:40px;
   height: 40px;
+  margin: 25px 20px;
+}
+.logomenu{
+  margin: 20px 20px;
 }
 .nav-icon{
     width: 20px;
     height: 20px;
 }
-nav{
+.nav{
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
-    align-items: center;
-
-}
-
-form{
-    display: flex;
-    padding: 1px;
-    border: 1px solid #000;
-    border-radius:15px;
-    display:none;
 }
 
 /*----search bar----*/
@@ -181,7 +174,7 @@ main {
         overflow: hidden;
 
         #current-option-text1 {
-          font-size: 1.6rem;
+          font-size: 1.8em;
           line-height: 3rem;
           width: 220px;
           height: 200px;
@@ -216,7 +209,7 @@ main {
         }
 
         #current-option-text2 {
-          font-size: 0.9rem;
+          font-size: 1em;
           height: 40px;
           display: flex;
           flex-direction: column;
@@ -414,7 +407,7 @@ main {
 
                 /*--------------------section-------------------------*/
 
-.map {
+#map {
   height: 400px;
 }
 iframe {
@@ -517,4 +510,52 @@ footer {
       width: 360px;
   }
 
+  #carousel-wrapper {
+    #current-option-text1{
+      font-size: 1.8em;
+    }
+    #current-option-text2 {
+      font-size: 1.8em;
+    }
+  }
+}
+
+@media screen and (min-width:1024px){
+  body{
+    font-size: 1.4em;
+  }
+  hero > img {
+      width: 360px;
+  }
+header {
+  font-size: 0.4em;
+    .menu-overlay{
+      position: inherit;
+      display: flex;
+      flex-direction: row;
+      opacity: 1;
+      
+    }
+    .menu-navigation{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      margin: 32px 0 0 0;
+    }
+    #hide-menu{
+      display: none;
+    }
+    #show-menu{
+      display: none;
+    }
+  }
+  #carousel-wrapper {
+    #current-option-text1{
+      font-size: 1.8em;
+    }
+    #current-option-text2 {
+      font-size: 1.8em;
+    }
+  }
 }
