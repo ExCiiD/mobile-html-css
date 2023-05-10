@@ -65,8 +65,12 @@ header{
   height: 40px;
   margin: 25px 20px;
 }
-.logomenu{
+.hide-logomenu{
+  position: absolute;
   margin: 20px 20px;
+}
+.show-logomenu{
+  margin: 30px;
 }
 .nav-icon{
     width: 20px;
