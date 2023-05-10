@@ -512,8 +512,27 @@ footer {
 
 
             /*----------------animations----------------*/
-.hovergrow:hover {
-  transform: scale(1.1); 
+.hoverline {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+.hoverline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 
